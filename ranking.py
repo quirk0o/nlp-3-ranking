@@ -11,7 +11,11 @@ def basic_form(word):
     return p.bform(ids[0]) if len(ids) > 0 else word
 
 
+def stats_sorted(stats):
+    return sorted(stats, key=lambda x: x[1], reverse=True)
+
+
 def ranking(words):
     basic_forms = [basic_form(word) for word in words]
     stats = Counter(basic_forms)
-    return sorted(stats.items(), key=lambda x: x[1], reverse=True)
+    return stats_sorted(stats.items()), stats_sorted(stats.most_common(100))

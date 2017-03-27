@@ -12,6 +12,6 @@ def read_corpus():
 
 if __name__ == '__main__':
     words = read_corpus()
-    ranking = ranking(words)
-    for rank, (word, occurences) in enumerate(ranking, start=1):
-        print '{}. {}: {}'.format(rank, word.encode('utf-8'), occurences)
+    ranking, most_common = ranking(words)
+    for rank, (word, frequency) in enumerate(most_common, start=1):
+        print '{}. {}: {}'.format(rank, word.encode('utf-8'), frequency)
