@@ -1,14 +1,9 @@
 # coding=utf-8
-import re
 from collections import Counter
 
 from plp import PLP
 
 p = PLP()
-
-
-def remove_special_characters(corpus):
-    return re.compile('[\W\d]+', re.UNICODE).sub(' ', corpus)
 
 
 def basic_form(word):

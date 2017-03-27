@@ -1,13 +1,8 @@
 import codecs
 from ranking import *
+from preprocessor import *
 
 CORPUS_FILENAME = './data/potop.txt'
-
-
-def clean_corpus(corpus):
-    corpus = corpus.strip().lower()
-    corpus = remove_special_characters(corpus)
-    return corpus.split()
 
 
 def read_corpus():
