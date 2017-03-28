@@ -15,7 +15,7 @@ if __name__ == '__main__':
     words = read_corpus()
     ranking, most_common = ranking(words)
     with codecs.open(OUTPUT_FILENAME, encoding='utf-8', mode='w') as output_file:
-        for word, frequency in most_common:
+        for word, frequency in ranking:
             output_file.write(word)
             output_file.write(':')
             output_file.write(str(frequency))
